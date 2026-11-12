@@ -1,4 +1,5 @@
 name: wifi-densepose sensing-server → Docker Hub + ghcr.io
+# Fork workflow registration refresh.
 
 # Build + publish the `wifi-densepose` sensing-server image under the repository
 # owner (`docker.io/<owner>/wifi-densepose` and `ghcr.io/<owner>/wifi-densepose`)
