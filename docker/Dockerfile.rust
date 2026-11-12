@@ -5,6 +5,11 @@
 # Stage 1: Build
 FROM rust:1.89-bookworm AS builder
 
+# Required by ndarray-linalg's statically built OpenBLAS backend.
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gfortran \
+    && rm -rf /var/lib/apt/lists/*
+
 WORKDIR /build
 
 # Copy workspace files
